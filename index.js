@@ -12,7 +12,7 @@ $(document).ready(function () {
         names.push(userInfo["name"]);
       });
       for (var i = 0; i < names.length; i++) {
-        $("#form-undone-tasks").append(`<label><input data-id="${names[i]}" class="cb pristine" type="checkbox"> <span>${names[i]}</span></label>`);
+        $("#form-undone-tasks").append(`<label><input value="" data-id="${names[i]}" class="cb pristine" type="checkbox"> <span>${names[i]}</span></label>`);
       }
       var q = document.querySelectorAll(".cb");
       for (var i in q) {
@@ -28,9 +28,17 @@ $(document).ready(function () {
       }
       var checkboxes=$('input[type="checkbox"]');
       checkboxes.change(function(){
-        console.log(this, this.checked);
-        
-      })      
+        if(this.checked){
+          fetch('https://api.trello.com/1/boards/5b8e1d2cd80f433972547169/cards/?limit=2&fields=name&members=true&member_fields=fullName&key=5ebb2e3505df87a317f75b76d08add31&token=4a18f0fc020cd3aee8d60deacfd95be1b6bfcfe10bd6f7cd58a7139f9a2eefb3')     
+          .then((res)=>res.json())
+          .then((data)=>{
+            data.forEach(cardNames=>{
+              console.log(cardNames["name"]);
+              
+            });
+          });
+        }
+      });
     });    
 });
 

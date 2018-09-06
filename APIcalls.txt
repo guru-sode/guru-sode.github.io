@@ -3,3 +3,5 @@ https://api.trello.com/1/members/me/boards?key=5ebb2e3505df87a317f75b76d08add31&
 More informtion about the board:
 https://api.trello.com/1/boards/{id of the board}/?cards=all
 https://api.trello.com/1/boards/5b8e1d2cd80f433972547169/?cards=all
+To get card objects:
+https://api.trello.com/1/boards/5b8e1d2cd80f433972547169/cards/?limit=2&fields=name&members=true&member_fields=fullName&key=5ebb2e3505df87a317f75b76d08add31&token=4a18f0fc020cd3aee8d60deacfd95be1b6bfcfe10bd6f7cd58a7139f9a2eefb3
