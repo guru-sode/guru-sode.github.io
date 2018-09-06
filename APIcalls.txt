@@ -5,3 +5,18 @@ https://api.trello.com/1/boards/{id of the board}/?cards=all
 https://api.trello.com/1/boards/5b8e1d2cd80f433972547169/?cards=all
 To get card objects:
 https://api.trello.com/1/boards/5b8e1d2cd80f433972547169/cards/?limit=2&fields=name&members=true&member_fields=fullName&key=5ebb2e3505df87a317f75b76d08add31&token=4a18f0fc020cd3aee8d60deacfd95be1b6bfcfe10bd6f7cd58a7139f9a2eefb3
+To get checklist items in test card:
+https://api.trello.com/1/cards/5b8e46ee21b5d55294f625d5/checklists?key=5ebb2e3505df87a317f75b76d08add31&token=4a18f0fc020cd3aee8d60deacfd95be1b6bfcfe10bd6f7cd58a7139f9a2eefb3
+
+
+
+
+
+
+
+
+My key:5ebb2e3505df87a317f75b76d08add31
+My token:4a18f0fc020cd3aee8d60deacfd95be1b6bfcfe10bd6f7cd58a7139f9a2eefb3
+ID of todo board:5b8e1d2cd80f433972547169
+ID of test card:5b8e46ee21b5d55294f625d5
+ID of API card:5b8fb1538448cf29c91af2cf
