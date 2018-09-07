@@ -27,6 +27,8 @@ $(document).ready(function () {
                     console.log(checklistNames["name"]);
                     if(checklistNames["state"]=="incomplete")
                     $("#form-undone-tasks").append(`<label><input value="" data-id="${checklistNames["name"]}" class="cb pristine" type="checkbox"> <span>${checklistNames["name"]}</span></label>`);
+                    if(checklistNames["state"]=="complete")
+                    $("#form-undone-tasks").append(`<label><input value="" data-id="${checklistNames["name"]}" class="cb pristine" type="checkbox"> <span><strike>${checklistNames["name"]}</strike></span></label>`);
                     var q = document.querySelectorAll(".cb");
                   for (var i in q) {
                     if (+i < q.length) {
